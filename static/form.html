@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE BSS SCHOOL ALUMNI ASSOCIATION</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="./the-bss-school-logo.png" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <style>
+      body {
+        background-color: #343a40;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .custom-svg {
+        margin-left: 20px;
+        margin-right: 10px;
+      }
+
+      .nav-pills .nav-link.active,
+      .nav-pills .nav-link:hover {
+        background-color: #343a40;
+        color: #fff;
+      }
+
+      .nav-pills .nav-item {
+        margin-right: 10px;
+      }
+
+      .form-box {
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .form-group.center-content {
+        text-align: center;
+      }
+
+      .form-group.center-content img {
+        display: block;
+        margin: 0 auto 10px;
+      }
+
+      .footer {
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="d-flex flex-wrap justify-content-center py-3">
+      <a
+        href="/"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+      >
+        <svg
+          class="custom-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="currentColor"
+          class="bi bi-backpack-fill"
+          viewBox="0 0 16 16"
+        >
+          <path d="M5 13v-3h4v.5a.5.5 0 0 0 1 0V10h1v3z" />
+          <path
+            d="M6 2v.341C3.67 3.165 2 5.388 2 8v5.5A2.5 2.5 0 0 0 4.5 16h7a2.5 2.5 0 0 0 2.5-2.5V8a6 6 0 0 0-4-5.659V2a2 2 0 1 0-4 0m2-1a1 1 0 0 1 1 1v.083a6 6 0 0 0-2 0V2a1 1 0 0 1 1-1m0 3a4 4 0 0 1 3.96 3.43.5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14A4 4 0 0 1 8 4M4.5 9h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5"
+          />
+        </svg>
+        <span class="fs-4">THE BSS SCHOOL ALUMNI ASSOCIATION</span>
+      </a>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active" aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="/ex-student#"
+            class="nav-link active ml-8"
+            onclick="scrollToFooter()"
+            >About</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <!-- Form -->
+    <div class="container mt-5 d-flex justify-content-center">
+      <div class="form-box">
+        <form action="/ex-student/submit" method="post">
+          <div class="form-group mb-3">
+            <label for="exampleInputName" style="color: black"
+              >Enter Name</label
+            >
+            <input
+              type="text"
+              name="Name"
+              class="form-control"
+              id="exampleInputName"
+              aria-describedby="nameHelp"
+              placeholder="Enter name"
+              required
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleInputRegistrationID" style="color: black"
+              >Registration ID</label
+            >
+            <input
+              type="text"
+              name="registrationid"
+              class="form-control"
+              id="exampleInputRegistrationID"
+              placeholder="Registration ID"
+              required
+            />
+            <p id="validationMessage" style="color: red; display: none">
+              You are not yet registered as an Alumni
+            </p>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleInputEmail1" style="color: black"
+              >Email address</label
+            >
+            <input
+              type="email"
+              name="Email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+              required
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else. Please re-check
+              your email as the pass will be sent there.</small
+            >
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleInputPhone" style="color: black"
+              >Phone number</label
+            >
+            <input
+              type="text"
+              name="phone"
+              class="form-control"
+              id="exampleInputPhone"
+              aria-describedby="phoneHelp"
+              placeholder="Enter your number"
+              required
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleInputPassoutYear" style="color: black"
+              >Passout Year</label
+            >
+            <input
+              type="number"
+              name="passoutyear"
+              class="form-control"
+              id="exampleInputPassoutYear"
+              placeholder="Enter your pass out year"
+              required
+            />
+          </div>
+          <div class="form-group mb-3 center-content">
+            <h4 style="color: black">Pay here</h4>
+            <img src="./QR.jpg" alt="My QR code" height="270px" width="200px" />
+            <h4 style="color: black">OR use the bank details</h4>
+            <h6 style="color: black">Bank Name: Acme Bank</h6>
+            <h6 style="color: black">Account Number: 1234567890</h6>
+            <h6 style="color: black">Routing Number: 987654321</h6>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleInputTransactionID" style="color: black"
+              >Transaction ID</label
+            >
+            <input
+              type="text"
+              name="transactionid"
+              class="form-control"
+              id="exampleInputTransactionID"
+              placeholder="Enter your transaction ID"
+              required
+            />
+          </div>
+          <div class="d-flex justify-content-center mt-3">
+            <button type="submit" value="submit" class="btn btn-dark">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="color: black">
+      &copy; 2024 THE BSS SCHOOL ALUMNI ASSOCIATION
+      <p class="text-body-secondary">
+        Made with ❤️ by
+        <a
+          href="https://www.instagram.com/such.is.me"
+          class="text-decoration-none"
+          >Suchismita Singha Roy</a
+        >
+        and
+        <a
+          href="https://www.instagram.com/im_agniva_007"
+          class="text-decoration-none"
+          >Agniva Bhattacharjee</a
+        >
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script>
+      var regID = $("#exampleInputRegistrationID")[0];
+      const submitButton = document.querySelector('button[type="submit"]');
+      const validationMessage = document.getElementById("validationMessage");
+
+      fetch("updated_field_names.xlsx")
+        .then((response) => response.blob())
+        .then((blob) => {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const data = new Uint8Array(e.target.result);
+            const workbook = XLSX.read(data, { type: "array" });
+            const sheetName = workbook.SheetNames[0];
+            const sheet = workbook.Sheets[sheetName];
+            const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+            const registrationIDs = new Set();
+            for (let i = 1; i < json.length; i++) {
+              const row = json[i];
+              if (row[0]) {
+                registrationIDs.add(row[0]);
+              }
+            }
+
+            console.log("All ids are " + [...registrationIDs]);
+
+            regID.addEventListener("input", () => {
+              if (registrationIDs.has(regID.value)) {
+                validationMessage.style.display = "none";
+                submitButton.disabled = false;
+              } else {
+                validationMessage.style.display = "block";
+                submitButton.disabled = true;
+              }
+            });
+          };
+          reader.readAsArrayBuffer(blob);
+        });
+
+      function scrollToFooter() {
+        window.location.href = "index.html#footer";
+      }
+    </script>
+  </body>
+</html>

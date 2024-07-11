@@ -16,7 +16,9 @@ router.get('/', async (req, res) => {
       registration.name,
       registration.email,
       registration.phone,
+      registration.whatsApp,
       registration.passOutYear,
+      registration.meal, 
       registration.uniqueId,
       registration.transactionID,
       registration.entered ? 'Yes' : 'No'
@@ -24,7 +26,7 @@ router.get('/', async (req, res) => {
 
     const workbook = XLSX.utils.book_new();
     const worksheet = XLSX.utils.aoa_to_sheet([
-      ["Name", "Email", "Phone", "Pass Out Year", "Unique ID", "Transaction ID", "Entered"],
+      ["Name", "Email", "Phone", "WhatsApp No", "Pass Out Year", "Meal", "Unique ID", "Transaction ID", "Entered"],
       ...data
     ]);
 

@@ -17,13 +17,16 @@ print(df.columns)
 
 # Function to generate unique registration ID
 def generate_registration_id():
-    return str(uuid.uuid4())
+    id = str(uuid.uuid4())
+    lis = id.split("-")
+    return "BSS - "+lis[-1]
+    # return str(uuid.uuid4())
 
 # SMTP configuration
 smtp_server = 'smtp.gmail.com'  # For Gmail
 smtp_port = 587  # Typically 587 for TLS, 465 for SSL
-smtp_user = 'bhattacharjee.agniva.jobs@gmail.com'
-smtp_password = 'dovz mfxv bfcy inpl'
+smtp_user = 'alumni.bss@gmail.com'
+smtp_password = 'yamj flmf wiky sgsw'
 
 # Function to send email
 def send_email(to_email, registration_id, first_name):

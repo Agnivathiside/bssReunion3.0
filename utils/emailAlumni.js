@@ -1,15 +1,28 @@
 import nodemailer from "nodemailer";
 
 export const sendMailToAlumni = async (email, Name, registration_id) => {
+    const lis = Name.split(" ")
+    const lastName = lis[lis.length-1]
+
     const htmlContent = `
-    <html>
-    <body>
-        <p>Dear ${Name},</p>
-        <p>Yes, now you are a part of the alumni association.</p>
-        <p>Your registration ID is: <strong>${registration_id}</strong></p>
-    </body>
-    </html>
-    `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to BSS School Alumni Association</title>
+</head>
+<body>
+    <p>Dear Ms. ${lastName},</p>
+    <p>We are delighted to welcome you as an official registered member of The BSS School Alumni Association. Your unique registration ID is provided below:</p>
+    <p><strong>${registration_id}</strong></p>
+    <p>Please keep this ID safe for all your future participations in our alumni events.</p>
+    <p>Thank you once again for joining us.</p>
+    <p>Best regards,</p>
+    <p>The BSS School Alumni Association</p>
+</body>
+</html>
+`
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -21,7 +34,7 @@ export const sendMailToAlumni = async (email, Name, registration_id) => {
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: email,
-        subject: 'Welcome to the BSS ALUMNI ASSOCIATION',
+        subject: 'Welcome to The BSS School Alumni Association',
         html: htmlContent,
     };
 

@@ -31,7 +31,7 @@ router.post("/submit-alumni", async (req, res) => {
     // Generate a unique registration ID
     var registrationID = uuidv4();
     const lis = registrationID.split('-')
-    registrationID = 'BSS - '+ lis[lis.length-1]
+    registrationID = 'BSS/'+ lis[lis.length-1]
 
     // Path to the Excel file
     const filePath = join(__dirname, "../static/updated_field_names.xlsx");

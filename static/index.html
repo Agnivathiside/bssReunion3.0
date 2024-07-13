@@ -10,106 +10,190 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="icon" type="image/x-icon" href="./the-bss-school-logo.png">
+    <link rel="icon" type="image/x-icon" href="./icon-png.png">
     <style>
-      .custom-svg {
+      
+      .custom-logo {
         margin-left: 20px;
         margin-right: 10px;
-      }
-
-      .nav-pills .nav-link.active,
-      .nav-pills .nav-link:hover {
-        background-color: #343a40;
-        color: #fff;
-      }
-
-      .nav-pills .nav-item {
-        margin-right: 10px;
-      }
-
+        width: 70px;
+        height: auto;
+        max-width: 100%;
+    }
       header {
-        margin-bottom: 0;
-      }
+    background-color: #36454F;
+    color: white;
+    position: relative; /* Ensure relative positioning for child elements */
+    display: flex;
+    justify-content: center!important;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 0; /* Removed unnecessary margin-bottom */
+  }
 
       .hero-section {
         margin-top: 0;
         padding-top: 0;
         position: relative;
-      }
-
-      .left-img,
-      .right-img {
-        width: 120px; /* Adjust the width as needed */
-        height: auto; /* Maintain aspect ratio */
-      }
-
-      @media (min-width: 992px) {
-        .left-img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          transform: translate(0, 0);
-          margin-top: 20px;
-          margin-left: 20px;
-        }
-
-        .right-img {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          transform: translate(0, 0);
-          margin-bottom: 20px;
-          margin-right: 20px;
-        }
+        background-image: url('hero-section.png'); /* Replace 'ink.jpg' with the path to your image */
+        background-size: cover; /* Makes sure the image covers the entire header */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+       
       }
       .custom-shadow {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8); /* Adjust the blur (second and third values) */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8); /* Adjust the blur (second and third values) */
+          }
+        .custom-header{
+          background-color:#36454F;
+          font-family: 'Georgia', serif;
+          background-image: url('header-weird-pattern.png'); /* Replace 'ink.jpg' with the path to your image */
+          background-size: cover; /* Makes sure the image covers the entire header */
+          background-position: center; /* Centers the image */
+          background-repeat: no-repeat; /* Prevents the image from repeating */
+          
+          @media (max-width: 767px) {
+          header {
+            background-size: contain; /* Scales the image to fit within the header */
+            background-position: top; /* Adjusts the position to align better */
+            padding: 10px 10px; /* Adjust padding for smaller screens if needed */
+          }
+          }
+          
+          }
+        .custom-btn-color {  /*buttons on page*/
+        background-color: #36454F;
+        border-color: #36454F;
+        color: white;
+        font-family: 'Georgia', serif;
+      }
+
+      .custom-btn-color:hover {
+        background-color: #36454F;
+        border-color: #36454F;
+        color: white;  
+        font-family: 'Georgia', serif;              
+      }
+      .fs-4{
+         margin-left: 20px; 
+        color:#E0E0E0;
+        font-size: 2.5rem!important; 
+        display: block!important;
+        width: 100%!important; 
+        
+        
+      }
+      .text-white{
+        color: #621313d8 !important;
+      }
+      .fs-5{
+        color:black;
+      }
+      .text-body-emphasis{
+        color: #C69181 !important;
+      }
+      .lead{
+        color:white;
+      }
+      .organiser-login-bg{
+        background-image: url('hero-section.png'); 
+          background-size: cover; 
+          background-position: center; 
+          background-repeat: no-repeat; 
+        
+      }
+      .milan-section{
+          /* background-image: url('milan-section.png'); 
+          background-size: cover; 
+          background-position: center; 
+          background-repeat: no-repeat; */
+          background-color: #36454F;
+
+      }
+      .text-organiser-login{
+        color: #621313d8
+
+      }
+      .top-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; 
+        margin-bottom: 20px;
+        
+      }
+
+      .top-buttons .btn {
+        margin: 5px; 
+        border-radius: 25px;
+      }
+      .bottom-box {
+      background-color: #96765A;
+      width: 100%;
+      height: 10px; 
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1; 
+    }
+    .custom-btn-color {
+        background-color: #36454F;
+        border-color: #36454F;
+        color: white;
+        font-family: 'Georgia', serif;
+        text-decoration: none; /* Remove underline */
+        display: inline-block; /* Ensure it behaves as a block element */
+        padding: 10px 20px; /* Adjust padding */
+        border-radius: 25px; /* Rounded corners */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+      }
+
+      .custom-btn-color:hover {
+        background-color: #2d3a42; /* Darken background on hover */
+        color: white; /* Change text color on hover */
+      }
+      .custom-btn-color a {
+            color: white; /* Inherit the button's text color */
+            text-decoration: none; /* Remove the underline */
         }
-      
-      
+
+        .custom-btn-color a:hover {
+            color: white; /* Ensure the color stays the same on hover */
+        }
   </style>
     </style>
   </head>
   <body>
     <!--Section 1 header-->
-    <header class="d-flex flex-wrap justify-content-center py-3 border-bottom">
+    <header class="d-flex flex-wrap justify-content-center py-3 border-bottom custom-header">
+      
       <a
         href="/"
         class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
       >
-        <svg
-          class="custom-svg"
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
-          fill="currentColor"
-          class="bi bi-backpack-fill"
-          viewBox="0 0 16 16"
-        >
-          <path d="M5 13v-3h4v.5a.5.5 0 0 0 1 0V10h1v3z" />
-          <path
-            d="M6 2v.341C3.67 3.165 2 5.388 2 8v5.5A2.5 2.5 0 0 0 4.5 16h7a2.5 2.5 0 0 0 2.5-2.5V8a6 6 0 0 0-4-5.659V2a2 2 0 1 0-4 0m2-1a1 1 0 0 1 1 1v.083a6 6 0 0 0-2 0V2a1 1 0 0 1 1-1m0 3a4 4 0 0 1 3.96 3.43.5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14A4 4 0 0 1 8 4M4.5 9h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5"
-          />
-        </svg>
-        <span class="fs-4">THE BSS SCHOOL ALUMNI ASSOCIATION</span>
+        <img src="./icon-png.png" class="custom-logo" style="z-index: 1;">
+        
+        <span class="fs-4" style="z-index: 2">The BSS School Alumni Association</span>
       </a>
-
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link active" aria-current="page">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#footer" class="nav-link active ml-8">About</a>
-        </li>
-      </ul>
+      <div class="bottom-box"></div>
     </header>
-    <div class="bg-dark text-secondary px-4 py-5 text-center hero-section">
-      <img src="./shooting-stars.png" class="img-fluid left-img" alt="Left Image" />
-      <img src="./rotated-star.png" class="img-fluid right-img" alt="Right Image" />
+
+
+    <!--hero-->
+    <div class="bg-dark text-secondary px-4 py-5 text-center hero-section"> <!--Bg color of hero sections-->
+      <div class="top-buttons">
+        <a href="#Home" class="btn custom-btn-color btn-lg">Home</a>
+        <button type="button" class="btn custom-btn-color btn-lg me-2"><a href="AboutUs.html">About Us</a></button>
+        <button type="button" class="btn custom-btn-color btn-lg me-2"><a href="OurTeam.html">Our Team</a></button>
+        <button type="button" class="btn custom-btn-color btn-lg me-2"><a href="News.html">News</a></button>
+        <button type="button" class="btn custom-btn-color btn-lg"><a href="Events.html">Events</a></button>
+        <a href="#milan&alumnilogin" class="btn custom-btn-color btn-lg">Login</a>
+      </div>
+    
+
       <div class="py-5">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6" id="Home">
               <h1 class="display-5 fw-bold text-white">Nostalgia Returns🎉</h1>
               <p class="fs-5 mb-4">
                 The BSS School Alumni Association presents MILAN - Welcome to
@@ -121,13 +205,6 @@
                 to the bonds that have stood the test of time and the wonderful
                 moments ahead. Enjoy every minute of this special gathering!
               </p>
-              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button
-                  type="button"
-                  class="btn btn-outline-info btn-lg px-6 me-sm-3 fw-bold"
-                >
-                  Scroll below to know more!
-                </button>
               </div>
             </div>
           </div>
@@ -135,62 +212,66 @@
       </div>
     </div>
   
-    <!--Second section i.e ALumni Login-->
-      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+    <!--Alumni Login-->
+      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg milan-section" id ="milan&alumnilogin">
         <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
           <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Alumni Login</h1>
-          <p class="lead">The Alumni Association invites former students to join by paying a one-time fee of Rs. 1000, granting lifetime membership benefits. Upon registration, members are eligible to participate in the event 'Milan'</p>
+          <br>
+          <p class="lead">The Alumni Association invites former students to join by paying a one-time fee of Rs. 300, granting lifetime membership benefits. Upon registration, members are eligible to participate in the event 'Milan'</p>
+          <br>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-            <button type="button" class="btn btn-dark btn-lg px-4 " onclick="window.location.href='/alumni'">Join Alumni Association</button>
-            <button type="button" class="btn btn-dark btn-lg px-4" onclick="window.location.href='/ex-student'">Sign up for Milan</button>
+            <button type="button" class="btn btn-dark btn-lg px-4" style="color: #C69181;" onclick="window.location.href='/alumni'">Join Alumni Association</button>
+            <button type="button" class="btn btn-dark btn-lg px-4" style="color: #C69181;" onclick="window.location.href='/ex-student'">Sign up for Milan</button>
           </div>
         </div>
         <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden custom-shadow">
-            <img class="rounded-lg-3" src="./the-bss-schoolpic3.jpg" alt="" width="720">
+            <img class="rounded-lg-3" src="./brochure.jpeg" alt="" width="720">
         </div>
       </div>
-   <!-- Third section i.e Organiser Login -->
-<!-- Third section i.e Organiser Login -->
-<div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg bg-dark">
+   
+<!--Organiser Login -->
+<div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg organiser-login-bg mb-0"style="margin-bottom: 0 !important;">
   <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-    <h1 class="display-4 fw-bold lh-1 text-body-emphasis" style="color: #fefffc !important;">Organiser Login</h1>
+    <h1 class="display-4 fw-bold lh-1 text-organiser-login">Organiser Login</h1>
+    <br>
     <p class="lead text-white">Organizers are kindly requested to enter the 5-digit passkey provided to them as the password.</p>
     <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
       <form>
-        <img class="mb-4" src="./login-icon.png" alt="" width="72" height="65">
-        <h1 class="h3 mb-3 fw-normal" style="color: #0dcaf0;">Please sign in</h1>
-
+        <img class="mb-4" src="./login-icon.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 fw-normal" style="color: #621313d8;">Please sign in</h1>
+        <br>
         <div class="form-floating mb-3">
           <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" fdprocessedid="rsmxtd">
-          <label for="floatingInput" style="color: #0dcaf0;">Email address</label>
+          <label for="floatingInput" style="color: #621313d8;">Email address</label>
         </div>
         <div class="form-floating">
           <input type="password" class="form-control" id="floatingPassword" placeholder="Password" fdprocessedid="id280c">
-          <label for="floatingPassword" style="color: #0dcaf0;">Password</label>
+          <label for="floatingPassword" style="color: #621313d8;">Password</label>
         </div>
 
         <div class="form-check text-start my-3">
           <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault" style="color: #0dcaf0;">
+          <label class="form-check-label" for="flexCheckDefault" style="color: #621313d8;">
             Remember me
           </label>
         </div>
-        <button class="btn btn-outline-info btn-lg px-6 me-sm-3 fw-bold" type="submit" fdprocessedid="gdtrek">Sign in</button>
+        <button class="btn btn-dark btn-lg px-6 me-sm-3 " style="color: #C69181;" type="submit" fdprocessedid="gdtrek">Sign in</button>
+        <!--class="btn btn-dark btn-lg px-4"-->
         
       </form>
     </div>
   </div>
   <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden custom-shadow">
-    <img class="rounded-lg-3" src="./hacker-1.jpg" alt="" width="720">
+    <img class="rounded-lg-3" src="./cat-on-laptop.jpg" alt="" width="720">
   </div>
 </div>
 
- <!--Contact Us Section-->
- <div class="container" id ="footer">
-  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+ <!-- Footer -->
+ <div class="container-fluid" id ="footer">
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top" style="background-color:whitesmoke;margin-top: 0;">
     <div class="col mb-3 text-center">
       <a href="/" class="d-flex justify-content-center align-items-center mb-3 link-body-emphasis text-decoration-none">
-        <img src="./the-bss-school-logo.png" alt="The BSS School Logo">
+        <img src="./icon-png.png" height="150" width="150" alt="The BSS School Logo">
       </a>
       <p class="text-body-secondary">© 2024</p>
     </div>
@@ -216,7 +297,7 @@
         </ul>
     </div>
     </footer>
-  <div class="row">
+  <div class="row"style="background-color:white">
     <div class="col text-center">
       <p class="text-body-secondary">Made with ❤️ by <a href="https://www.instagram.com/such.is.me" class="text-decoration-none">Suchismita Singha Roy</a> and <a href="https://www.instagram.com/im_agniva_007" class="text-decoration-none">Agniva Bhattacharjee</a></p>
 </div>

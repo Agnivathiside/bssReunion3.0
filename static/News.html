@@ -144,6 +144,67 @@
         font-family: 'Georgia', serif; 
         margin-bottom: 30px; 
     }
+    .font{
+      font-family: Georgia, serif;
+    }
+    @media (max-width: 576px) {
+      .custom-logo {
+        width: 50px; /* Adjusted the size of the logo */
+        margin-left: 10px;
+        margin-right: 5px;
+      }
+
+      .fs-4 {
+        font-size: 1.5rem !important; /* Adjusted the font size of the header text */
+        margin-left: 10px;
+      }
+
+      header {
+        padding: 5px 10px; /* Adjusted the padding of the header */
+      }
+
+      .bottom-box {
+        height: 5px; /* Adjusted the height of the bottom box */
+      }
+    }
+
+    @media (max-width: 485px) {
+      .custom-logo {
+        width: 40px; /* Further adjusted the size of the logo */
+        margin-left: 5px;
+        margin-right: 2px;
+      }
+
+      .fs-4 {
+        font-size: 1.2rem !important; /* Further adjusted the font size of the header text */
+        margin-left: 5px;
+      }
+
+      header {
+        padding: 3px 5px; /* Further adjusted the padding of the header */
+      }
+
+      .bottom-box {
+        height: 3px; /* Further adjusted the height of the bottom box */
+      }
+    }
+    @media (max-width: 790px) and (min-width: 576px) {
+        .custom-logo {
+          width: 60px; /* Adjust the size of the logo */
+          margin-left: 15px;
+          margin-right: 8px;
+        }
+        .fs-4 {
+          font-size: 1.7rem !important; /* Adjust the font size of the header text */
+          margin-left: 15px;
+        }
+        header {
+          padding: 8px 15px; /* Adjust the padding of the header */
+        }
+        .bottom-box {
+          height: 8px; /* Adjust the height of the bottom box */
+        }
+      }
   </style>
     </style>
   </head>
@@ -164,9 +225,41 @@
 
 
     <!--hero-->
-    <div class="bg-dark text-secondary px-4 py-5 text-center hero-section"> <!--Bg color of hero sections-->
-      
-      </div>
+    <div class="bg-dark text-secondary px-4 py-5 text-center hero-section">
+      <!--Bg color of hero sections-->
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1 font" style="color: #36454F;">Bringing Smiles: Successful Donation Drive for Tiljala Shed<br><br></h2>
+          <p class="lead font">
+            The BSS School Alumni Association successfully organized the donation
+            drive in association with Tiljala Shed , on the 18th of May 2024,
+            bringing smiles on each child’s face. This donation drive was solely
+            possible because of the contributions from the alumni members and
+            their collected registration fees. The things donated include school
+            bag for each child, a green board and a ceiling fan much to the
+            requirements of the shed.
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="./2[1].png" alt="Donation drive img" class="img-fluid" height="500px" width="500px"/>
+        </div>
+      </div> 
+      <br>
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1 font" style="color: #36454F;">Empowerment through Wellness: Celebrating International Yoga Day with Neha Gupta<br><br></h2>
+          <p class="lead font">
+            Embrace the power of a calm mind to conquer life’s challenges.  
+            The BSS School Alumni Association hosted ‘Empowerment through Wellness’ with Neha Gupta, celebrating International Yoga Day virtually on Sunday, dated: 23rd June, 2024.
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="./Untitled design.png" alt="Donation drive img" class="img-fluid" height="500px" width="500px"/>
+        </div>
+      </div>  
+    </div> 
+    </div>
+    
       <!-- Footer -->
 <div class="footer">
   <!--insert main footer here-->
@@ -175,7 +268,7 @@
     <div class="col-md-4 text-center">
       <img src="icon-png.png" style="height: 100px; width: 100px;">
       <br><br>
-      <p style="font-size: 0.9rem;">THE BSS SCHOOL ALUMNI ASSOCIATION</p>
+      <p style="font-size: 0.9rem;">© 2024 THE BSS SCHOOL ALUMNI ASSOCIATION</p>
     </div>
     
     <!-- Middle Grid with Text -->

@@ -221,6 +221,7 @@
       <br>
       
       <p class="second-part">If you have any questions or need further assistance, please don't hesitate to contact us.</p>
+      <p>You will be redirected to the home page in 20 seconds.</p>
     </div>
     <!-- Footer -->
 <div class="footer">
@@ -287,5 +288,10 @@
   </div>
 </div>
 </div>
+<script>
+  setTimeout(function() {
+      window.location.href = "/";
+  }, 20000); // 20000 milliseconds = 20 seconds
+</script>
   </body>
 </html>

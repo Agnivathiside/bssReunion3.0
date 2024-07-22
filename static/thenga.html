@@ -221,7 +221,7 @@
       <br>
       
       <p class="second-part">If you have any questions or need further assistance, please don't hesitate to contact us.</p>
-      <p>You will be redirected to the home page in 20 seconds.</p>
+      <p>You will be redirected to the home page in <span id="countdown">20</span> seconds.</p>
     </div>
     <!-- Footer -->
 <div class="footer">
@@ -289,9 +289,21 @@
 </div>
 </div>
 <script>
-  setTimeout(function() {
-      window.location.href = "/";
-  }, 20000); // 20000 milliseconds = 20 seconds
+  // Countdown logic
+  var countdownElement = document.getElementById('countdown');
+  var secondsRemaining = 20;
+
+  function updateCountdown() {
+      secondsRemaining--;
+      countdownElement.textContent = secondsRemaining;
+
+      if (secondsRemaining <= 0) {
+          clearInterval(countdownInterval);
+          window.location.href = "/";
+      }
+  }
+
+  var countdownInterval = setInterval(updateCountdown, 1000); // Update every second
 </script>
   </body>
 </html>
